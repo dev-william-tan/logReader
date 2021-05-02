@@ -19,19 +19,10 @@ function getURL(url){
   return result;
 }
 
-
 //Counting the number of Unique IP Addresses 
-function countIP(){
-  let count = [];  
-  let k = [];
-  //if count matches then add 1 if not it will stay as 1 
-  IParray.forEach (num => {
-      count[num] = count[num] ? count[num] + 1 : 1;   
-  }); 
-  for (const [key] of Object.entries(count)){
-    k.push(key);
-  };
-  console.log("Number of Unique URLs: " + k.length);
+function countUnique(arr){
+  let uniqueValue = console.log("Number of unique IP Addresses: " +  new Set(arr).size);
+  return uniqueValue;
 }
 
 function getTop3(){
@@ -48,15 +39,10 @@ function getTop3(){
   console.log(`Top 3 Most visited URLS: \n First: ${firstURL} times. \n Second: ${secondURL} times. \n Third: ${thirdURL} times.`);
 }
 
-function countUnique(iterable){
-  let val = iterable; 
-  let first10char =  val[1].substring(0,10);
-  console.log("this is 10 letters" + first10char);
-  return new Set(iterable);
-}
 
-//console.log(countUnique(URLarray));
 
-//console.log(countIP(IParray));
+countUnique(IParray);
+getTop3(IParray);
+//console.log(countUnique(IParray));
 //console.log(getTop3(IParray));
 //console.log(URLarray);

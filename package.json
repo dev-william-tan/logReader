@@ -1,0 +1,25 @@
+{
+  "name": "log-reader",
+  "version": "1.0.0",
+  "description": "Code for Reading from a text file and extracting information",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-william-tan/logReader.git"
+  },
+  "keywords": [
+    "mocha"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-william-tan/logReader/issues"
+  },
+  "homepage": "https://github.com/dev-william-tan/logReader#readme",
+  "devDependencies": {
+    "mocha": "^8.3.2"
+  }
+}
