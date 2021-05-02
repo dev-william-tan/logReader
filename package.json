@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/dev-william-tan/logReader#readme",
   "devDependencies": {
+    "chai": "^4.3.4",
     "mocha": "^8.3.2"
-  }
+  },
+  "dependencies": {}
 }

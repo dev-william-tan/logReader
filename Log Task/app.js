@@ -13,7 +13,6 @@ function getIP(address){
   return result;
 }
 
-
 //retrieving the URL from text file
 function getURL(url){
   let result = url.match(urlregex);
@@ -40,12 +39,6 @@ function getTop3(){
   console.log(`Top 3 Most visited URLS: \n First: ${firstURL} times. \n Second: ${secondURL} times. \n Third: ${thirdURL} times.`);
 }
 
-module.exports = {
-  getIP,
-  getURL,
-  countUnique,
-  getTop3, 
-}; 
 
 
 countUnique(IParray);
