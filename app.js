@@ -3,9 +3,20 @@ let fs = require("fs");
 let IPregex = /[\d]{1,3}\.[\d]{1,3}\.[\d]{1,3}\.[\d]{1,3}/gm;
 let urlregex = /(?<=GET)(.*?)(?=HTTP)/gm; 
 let file = fs.readFileSync("programming-task-example-data.log").toString('utf-8'); 
-
 let IParray = getIP(file);
 let URLarray = getURL(file);
+
+//exports for testing 
+module.exports = {
+  getIP,
+  getURL,
+  countUnique,
+  getTop3,
+}; 
+
+console.log('Number of Unique IP Addresses: ' + countUnique(IParray));
+getTop3(IParray);
+getTop3(URLarray);
 
 //retrieving the IP address from the text file 
 function getIP(address){
@@ -37,21 +48,7 @@ function getTop3(arr){
   let firstURL = sortCount[0];
   let secondURL = sortCount[1];
   let thirdURL = sortCount[2];
-  console.log(`Top 3 Most visited URLS: \n First: ${firstURL} times. \n Second: ${secondURL} times. \n Third: ${thirdURL} times.`);
+  console.log(`Top 3 Most visited : \n First: ${firstURL} times. \n Second: ${secondURL} times. \n Third: ${thirdURL} times.`);
   return sortCount;
 }
 
-module.exports = {
-  getIP,
-  getURL,
-  countUnique,
-  getTop3,
-}; 
-
-
-
-//countUnique(IParray);
-//getTop3(IParray);
-console.log('Number of Unique values: ' + countUnique(IParray));
-//console.log(getTop3(IParray));
-//console.log(URLarray);
