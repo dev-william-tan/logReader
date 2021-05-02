@@ -41,16 +41,3 @@ describe('get the top 3 repeated values in an array sorted from highest to lowes
         assert.deepEqual(result,expected ); 
     });
 });
-
-
-/*
-describe ('get URL from file', () => {
-    it ('returns URL from the apache data log', () => {
-        let data = '168.41.191.9 - - [09/Jul/2018:23:00:42 +0200] "GET /docs/manage-users/ HTTP/1.1" 200 3574 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3"'
-        let result = app.getURL(data);
-        let URLregex = /(?<=GET)(.*?)(?=HTTP)/gm; 
-        assert.match(result, URLregex); 
-    })
-
-});
-*/
